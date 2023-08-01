@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../roulette_pjt/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Sofia"
+    />
     <title>OddEvenNumber</title>
     <script>
       let numTypeO = true;
@@ -13,11 +17,14 @@
         // 값이 false면 선택된 것!
         if (!numTypeO) {
           document.getElementById("odd").style.backgroundColor = "gray";
+          document.getElementById("txto").style.color = "gray";
           numTypeO = true;
         } else {
           document.getElementById("odd").style.backgroundColor = "red";
+          document.getElementById("txto").style.color = "red";
           numTypeO = false;
           document.getElementById("even").style.backgroundColor = "gray";
+          document.getElementById("txte").style.color = "gray";
           numTypeE = true;
         }
       }
@@ -25,11 +32,14 @@
       function clickEven() {
         if (!numTypeE) {
           document.getElementById("even").style.background = "gray";
+          document.getElementById("txte").style.color = "gray";
           numTypeE = true;
         } else {
           document.getElementById("even").style.background = "black";
+          document.getElementById("txte").style.color = "black";
           numTypeE = false;
           document.getElementById("odd").style.background = "gray";
+          document.getElementById("txto").style.color = "gray";
           numTypeO = true;
         }
       }
@@ -60,6 +70,7 @@
         width: 100px;
         background-color: gray;
         margin: 0 10px;
+        border-radius: 20px;
       }
       #even {
         height: 100px;
@@ -70,6 +81,18 @@
         text-align: center;
         margin-top: 30px;
       }
+      #txto {
+        font-family: "REM", sans-serif;
+        font-weight: 600;
+        font-size: 18px;
+        color: gray;
+      }
+      #txte {
+        font-family: "REM", sans-serif;
+        font-weight: 600;
+        font-size: 18px;
+        color: gray;
+      }
     </style>
   </head>
   <body>
@@ -77,18 +100,18 @@
       <div>
         <div class="squareContainer">
           <div class="squre">
-            <p>ODD</p>
+            <p id="txto">ODD</p>
             <div class="box" id="odd" onclick="clickOdd()"></div>
           </div>
           <div class="squre">
-            <p>EVEN</p>
+            <p id="txte">EVEN</p>
             <div class="box" id="even" onclick="clickEven()"></div>
           </div>
         </div>
 
         <div class="inps">
           <input type="number" id="betm" />
-          <input type="button" id="" value="BET!" onclick="sending()" />
+          <button id="" value="BET!" onclick="sending()">BET!</button>
         </div>
       </div>
     </div>
