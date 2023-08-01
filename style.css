@@ -13,3 +13,25 @@ body {
 	height: 100vh;
 	transform: translate(0, -80px);
 }
+input {
+	border-bottom: 1px solid #eee;
+	padding: 5px 10px;
+	border: 0;
+	box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+	border-radius: 10px;
+	height: 30px;
+}
+input:focus {
+	outline: none !important;
+	box-shadow: 0 0 10px #719ece;
+}
+button {
+	appearance: none;
+	-webkit-appearance: none;
+	padding: 10px;
+	border: none;
+	background-color: #252ff5;
+	color: #fff;
+	font-weight: 500;
+	border-radius: 5px;
+}
