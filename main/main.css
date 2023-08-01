@@ -1,0 +1,53 @@
+.intro {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+}
+
+.intro_title {
+  font-size: 60px;
+  line-height: 1.166666666666667;
+  color: #fff;
+  text-align: center;
+}
+
+.intro_title:after {
+  content: "|";
+  display: inline-block;
+  font-size: 70px;
+  animation: moveCursor 600ms infinite;
+}
+
+@keyframes moveCursor {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.intro_button {
+  position: absolute;
+  left: 50%;
+  bottom: 8%;
+  transform: translate(-50%, 8%);
+  width: 37px;
+  height: 37px;
+  background-image: url("../assets/down-arrow.jpeg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  transition: opacity 500ms ease-in;
+  z-index: 100;
+}
+
+.intro_title:hover {
+  cursor: pointer;
+}
