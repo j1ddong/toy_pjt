@@ -6,27 +6,44 @@
     <link rel="stylesheet" href="../roulette_pjt/style.css" />
     <title>OddEvenNumber</title>
     <script>
-      let numType = true;
+      let numTypeO = true;
+      let numTypeE = true;
 
       function clickOdd() {
-        if (numType) {
-          // click
-          document.getElementById("odd").style.backgroundColor = "red";
-          numType = false;
-        } else {
+        // 값이 false면 선택된 것!
+        if (!numTypeO) {
           document.getElementById("odd").style.backgroundColor = "gray";
-          numType = true;
+          numTypeO = true;
+        } else {
+          document.getElementById("odd").style.backgroundColor = "red";
+          numTypeO = false;
+          document.getElementById("even").style.backgroundColor = "gray";
+          numTypeE = true;
         }
       }
 
       function clickEven() {
-        if (numType) {
-          // click
-          document.getElementById("even").style.backgroundColor = "black";
-          numType = false;
+        if (!numTypeE) {
+          document.getElementById("even").style.background = "gray";
+          numTypeE = true;
         } else {
-          document.getElementById("even").style.backgroundColor = "gray";
-          numType = true;
+          document.getElementById("even").style.background = "black";
+          numTypeE = false;
+          document.getElementById("odd").style.background = "gray";
+          numTypeO = true;
+        }
+      }
+
+      // sending
+      function sending() {
+        let bmoney = Number(document.getElementById("betm").value);
+        const money = Number(localStorage.getItem("money")); // parseFloat
+
+        if (money < bmoney) {
+          // 룰렛 페이지로 이동
+          // location.href = '---.html';
+        } else {
+          alert("You bet than you have");
         }
       }
     </script>
@@ -57,20 +74,22 @@
   </head>
   <body>
     <div class="locenter">
-      <div class="squareContainer">
-        <div class="squre">
-          <p>ODD</p>
-          <div class="box" id="odd" onclick="clickOdd()"></div>
+      <div>
+        <div class="squareContainer">
+          <div class="squre">
+            <p>ODD</p>
+            <div class="box" id="odd" onclick="clickOdd()"></div>
+          </div>
+          <div class="squre">
+            <p>EVEN</p>
+            <div class="box" id="even" onclick="clickEven()"></div>
+          </div>
         </div>
-        <div class="squre">
-          <p>EVEN</p>
-          <div class="box" id="even" onclick="clickEven()"></div>
-        </div>
-      </div>
 
-      <div class="inps">
-        <input type="text" />
-        <input type="button" id="" value="BET!" />
+        <div class="inps">
+          <input type="number" id="betm" />
+          <input type="button" id="" value="BET!" onclick="sending()" />
+        </div>
       </div>
     </div>
   </body>
