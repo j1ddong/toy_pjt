@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../roulette_pjt/style.css" />
+    <title>OddEvenNumber</title>
+    <script>
+      let numType = true;
+
+      function clickOdd() {
+        if (numType) {
+          // click
+          document.getElementById("odd").style.backgroundColor = "red";
+          numType = false;
+        } else {
+          document.getElementById("odd").style.backgroundColor = "gray";
+          numType = true;
+        }
+      }
+
+      function clickEven() {
+        if (numType) {
+          // click
+          document.getElementById("even").style.backgroundColor = "black";
+          numType = false;
+        } else {
+          document.getElementById("even").style.backgroundColor = "gray";
+          numType = true;
+        }
+      }
+    </script>
+    <style>
+      .squareContainer {
+        text-align: center;
+        margin-top: 50px;
+      }
+      .squre {
+        display: inline-block;
+      }
+      .box {
+        height: 100px;
+        width: 100px;
+        background-color: gray;
+        margin: 0 10px;
+      }
+      #even {
+        height: 100px;
+        width: 100px;
+        background-color: gray;
+      }
+      .inps {
+        text-align: center;
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="locenter">
+      <div class="squareContainer">
+        <div class="squre">
+          <p>ODD</p>
+          <div class="box" id="odd" onclick="clickOdd()"></div>
+        </div>
+        <div class="squre">
+          <p>EVEN</p>
+          <div class="box" id="even" onclick="clickEven()"></div>
+        </div>
+      </div>
+
+      <div class="inps">
+        <input type="text" />
+        <input type="button" id="" value="BET!" />
+      </div>
+    </div>
+  </body>
+</html>
