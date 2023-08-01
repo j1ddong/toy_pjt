@@ -7,17 +7,38 @@
 		<link rel="stylesheet" href="./style.css" />
 		<script>
 			const setMoney = () => {
-				const inputMoney = document.getElementById('inputMoney').value;
-				localStorage.setItem('money', inputMoney);
+				const inputMoney = parseInt(
+					document.getElementById('inputMoney').value
+				);
+				if (inputMoney <= 0) {
+					alert('Please enter more than CAD 0 ');
+				} else {
+					localStorage.setItem('money', inputMoney);
+					location.href = './games.html';
+				}
 			};
 		</script>
+		<style>
+			#currency {
+				font-size: 20px;
+			}
+			.currencyContainer {
+				display: inline-flex;
+				align-items: center;
+				gap: 15px;
+			}
+		</style>
 	</head>
 	<body>
-		<div class="center">
-			<h2>Please enter money</h2>
-			<span>CAD</span>
-			<input type="number" id="inputMoney" />
-			<button onclick="setMoney()">Enter</button>
+		<div class="locenter">
+			<div>
+				<h2>Please enter money</h2>
+				<div class="currencyContainer">
+					<span id="currency">CAD</span>
+					<input type="number" id="inputMoney" />
+					<button onclick="setMoney()">Enter</button>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>
