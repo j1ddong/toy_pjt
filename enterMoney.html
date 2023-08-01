@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Enter Money</title>
+		<link rel="stylesheet" href="./style.css" />
+		<script>
+			const setMoney = () => {
+				const inputMoney = document.getElementById('inputMoney').value;
+				localStorage.setItem('money', inputMoney);
+			};
+		</script>
+	</head>
+	<body>
+		<div class="center">
+			<h2>Please enter money</h2>
+			<span>CAD</span>
+			<input type="number" id="inputMoney" />
+			<button onclick="setMoney()">Enter</button>
+		</div>
+	</body>
+</html>
