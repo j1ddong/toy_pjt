@@ -5,36 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Games</title>
     <style> 
-        body {
-        margin: 0px;
-        padding: 0px;
+        #games{
+            max-width: 1536px;
+            max-height: 747px;
+            display: flex;
+            justify-content: center;
+            margin-top: auto;
+            min-height: 50dvh;
+        }
+        .grid-container {
+            display: grid;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .grid-item {
+            padding: 20px;
         }
         #games-maindiv{
-            padding-top: 100px; 
-            margin: 100px; 
+            padding-top: 30px; 
+            margin: 10px; 
             display: flex;
+            justify-content: center;
         }
         #games-subdiv{
+            margin-left: 50px;
             position: relative;
         }
-        #games-div1{
+        #games-div{
             position: absolute; 
-            top: -80px; 
-            left: 320px; 
-            float: left; 
-            transform:rotate(-45deg);
-        }
-        #games-div2{
-            position: absolute; 
-            top: -80px; 
-            left: 420px; 
-            float: left; 
-            transform:rotate(-45deg);
-        }
-        #games-div3{
-            position: absolute; 
-            top: -80px; 
-            left: 320px; 
+            top: -40px; 
+            left: 135px; 
             float: left; 
             transform:rotate(-45deg);
         }
@@ -42,26 +42,54 @@
             margin-left: 100px; 
             margin-right: 100px;
         }
+        #x2{
+            width: 50px;
+            height: 50px;
+        }
+        #x3{
+            width: 50px;
+            height: 50px;
+        }
+        #x5{
+            width: 50px;
+            height: 50px;
+        }
+        #AD{
+            width: 900px;
+            height: 60px;
+        }
     </style>
 </head>
-<body>
-    <div id="games-maindiv">
-        <div id="games-subdiv">
-            <a href="./OddEvenNum.html" target="_self"><img src="./OddEvenNum.png"></img></a>
-            <div id="games-div1">
-                 <img src="./x2.png"></img> 
+<body id="games">
+    <div class="grid-container">
+        <div>
+            <div class="grid-item">
+                <a href="" target="_self"><img id="AD" src="./assets/AD.gif"></img></a>
             </div>
         </div>
-        <div id="games-subdiv">
-            <a href="./rangeNumber.html" target="_self"><img src="./rangeNumber.png" id="games-divmid"></img></a>
-            <div id="games-div2">
-                 <img src="./x3.png"></img> 
+        <div class="grid-item" id="games-maindiv">
+            <div id="games-subdiv">
+                <a href="./OddEvenNum.html" target="_self"><img id="img" src="./assets/OddEvenNum.png"></img></a>
+                <div id="games-div">
+                    <img id="x2" src="./assets/x2.png"></img> 
+                </div>
+            </div>
+            <div id="games-subdiv">
+                <a href="./rangeNumber.html" target="_self"><img id="img" src="./assets/rangeNumber.png" id="games-divmid"></img></a>
+                <div id="games-div">
+                    <img id="x3" src="./assets/x3.png"></img> 
+                </div>
+            </div>
+            <div id="games-subdiv">
+                <a href="./exacNumber.html" target="_self"><img id="img" src="./assets/exacNumber.jpg"></img></a>
+                <div id="games-div">
+                    <img id="x5" src="./assets/x5.png"></img> 
+                </div>
             </div>
         </div>
-        <div id="games-subdiv">
-            <a href="./roulette.html" target="_self"><img src="./roulette.jpg"></img></a>
-            <div id="games-div3">
-                 <img src="./x5.png"></img> 
+        <div>
+            <div class="grid-item">
+                <a href="" target="_self"><img id="AD" src="./assets/AD.gif"></img></a>
             </div>
         </div>
     </div>
