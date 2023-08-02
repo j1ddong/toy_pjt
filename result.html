@@ -21,15 +21,15 @@
       if (type === "oddEven") {
         const remainder = resultValue % 2 !== 0; //홀수 true
         if (remainder === betValue) {
-          location.href = "./success.html";
           money = betValue * 2 + money;
           localStorage.clear();
           localStorage.setItem("money", money);
+          location.href = "./success.html";
         } else {
-          // console.log("슬퍼..");
           money -= betValue;
           localStorage.clear();
           localStorage.setItem("money", money);
+          location.href = "./failure.html";
         }
       } else if (type === "") {
       } else {
