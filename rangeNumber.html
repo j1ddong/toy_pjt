@@ -21,22 +21,7 @@
 				}
 
 				let betNumberCode;
-				if (str == '1~10') 
-                {
-					betNumberCode = 'ten';
-				}
-                else if (str == '11~20') 
-                {
-					betNumberCode = 'twenty';
-				} 
-                else if (str == '21~30') 
-                {
-					betNumberCode = 'thirty';
-				}
-                else if (!str) 
-                {
-					alert('please select range');
-				}
+				
 
 
 
@@ -56,8 +41,25 @@
 				{
 					alert('You bet than you have');
 				}
+				else if(!str)
+				{
+					alert('please select range');
+				}
 				else
 				{
+					if (str == '1~10') 
+                	{
+						betNumberCode = 'ten';
+					}
+                	else if (str == '11~20') 
+                	{
+						betNumberCode = 'twenty';
+					} 
+                	else if (str == '21~30') 
+                	{
+						betNumberCode = 'thirty';
+					}
+
 					// set to local strage
 					localStorage.setItem("type", "rangeNum"); //type
 					localStorage.setItem("betValue", betNumberCode); //selected number
@@ -65,7 +67,6 @@
 
 					location.href = "./roulette.html";
 				}
-                
 				
 			}
 		</script>
@@ -105,6 +106,7 @@
                 display: block;
                 text-align: center;
 	            margin: auto;
+				
             }
             
 		</style>
