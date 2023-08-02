@@ -55,7 +55,7 @@
         const money = Number(localStorage.getItem("money")); // parseFloat
 
         if (money < inputBet && (!numTypeO || !numTypeE)) {
-          alert("You bet than you have");
+          alert("You bet more than you have");
         } else if (money < inputBet && (numTypeO || numTypeE)) {
           alert("Please click ODD or EVEN");
         } else if (!inputBet) {

@@ -10,28 +10,67 @@
       function getRandom(min, max) {
         return Math.floor(Math.random() * (max - min + 1) + min);
       }
+
+      function newLocalStorage(money) {
+        localStorage.setItem("money", money);
+      }
+
       const resultValue = getRandom(1, 30);
       console.log(resultValue);
-
-      const betValue =
-        localStorage.getItem("betValue") === "true" ? true : false;
-
       let money = Number(localStorage.getItem("money"));
+      let inputBet = Number(localStorage.getItem("inputBet"));
 
       if (type === "oddEven") {
+        const betValue =
+          localStorage.getItem("betValue") === "true" ? true : false;
+
         const remainder = resultValue % 2 !== 0; //홀수 true
         if (remainder === betValue) {
-          money = betValue * 2 + money;
-          localStorage.clear();
-          localStorage.setItem("money", money);
+          money = inputBet * 2 + money;
+          newLocalStorage(money);
           location.href = "./success.html";
         } else {
-          money -= betValue;
-          localStorage.clear();
-          localStorage.setItem("money", money);
+          money -= inputBet;
+          newLocalStorage(money);
           location.href = "./failure.html";
         }
-      } else if (type === "") {
+      } else if (type === "rangeNum") {
+        const betValue = localStorage.getItem("betValue");
+        console.log(betValue, "bet");
+        if (betValue === "ten") {
+          console.log("10 bet");
+          if (0 <= resultValue <= 10) {
+            money = inputBet * 3 + money;
+            newLocalStorage(money);
+            location.href = "./success.html";
+          } else {
+            money -= inputBet;
+            newLocalStorage(money);
+            location.href = "./failure.html";
+          }
+        } else if (betValue === "twenty") {
+          console.log("20 bet");
+          if (11 <= resultValue <= 20) {
+            money = inputBet * 3 + money;
+            newLocalStorage(money);
+            location.href = "./success.html";
+          } else {
+            money -= inputBet;
+            newLocalStorage(money);
+            location.href = "./failure.html";
+          }
+        } else {
+          console.log("30 bet");
+          if (21 <= resultValue <= 30) {
+            money = inputBet * 3 + money;
+            newLocalStorage(money);
+            location.href = "./success.html";
+          } else {
+            money -= inputBet;
+            newLocalStorage(money);
+            location.href = "./failure.html";
+          }
+        }
       } else {
       }
     </script>
