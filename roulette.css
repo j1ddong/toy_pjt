@@ -1,0 +1,202 @@
+*{
+    box-sizing:border-box;
+}
+body{
+    margin:0;
+    padding:0;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    height:100vh;
+    overflow:hidden;
+}
+.container{
+    width:500px;
+    height:500px;
+    background-color: white;
+    border-radius:50%;
+    border:15px solid #ecc84a;
+    position: relative;
+    overflow: hidden;
+    transition: 5s;
+    right: 50px;
+}
+.container div{
+    height:50%;
+    width:53px;
+    position: absolute;
+    clip-path: polygon(100% 0 , 50% 100% , 0 0 );
+    transform:translateX(-50%);
+    transform-origin:bottom;
+    text-align:center;
+    align-items: center;
+    justify-content: center;
+    font-size:30px;
+    font-weight:bold;
+    font-family:sans-serif;
+    color:#fff;
+    left:208.7px;
+}
+.markers{position:absolute;
+    left:50%;
+    top:0;margin-left:-25px;
+    width:0;
+    height:0;
+    border:25px solid black;
+    border-left-color:transparent;
+    border-right-color:transparent;
+    border-bottom-color:transparent;z-index:9999;
+}
+
+.container .onezero{
+    background-color: #cd2e22;
+    left: 50%;
+}
+.container .two{
+    background-color: black;
+    transform: rotate(12deg);
+}
+.container .three{
+    background-color: #cd2e22;
+    transform:rotate(24deg);
+}
+.container .four{
+    background-color: black;
+    transform: rotate(36deg);
+}
+.container .five{
+    background-color: #cd2e22;
+    transform: rotate(48deg);
+}
+.container .six{
+    background-color: black;
+    transform: rotate(60deg);
+}
+.container .seven{
+    background-color: #cd2e22;;
+    transform: rotate(72deg);
+}
+.container .eight{
+    background-color: black;
+    transform: rotate(84deg);
+}
+.container .nine{
+    background-color: #cd2e22;
+    transform: rotate(96deg);
+}
+.container .ten{
+    background-color: black;
+    transform: rotate(108deg);
+}
+.container .eleven{
+    background-color: #cd2e22;
+    transform:rotate(120deg);
+}
+.container .twelve{
+    background-color: black;
+    transform: rotate(132.1deg);
+}
+.container .thirteen{
+    background-color: #cd2e22;
+    transform: rotate(145deg);
+}
+.container .fourteen{
+    background-color: black;
+    transform: rotate(157deg);
+}
+.container .fifteen{
+    background-color: #cd2e22;;
+    transform: rotate(169deg);
+}
+.container .sixteen{
+    background-color: black;
+    transform: rotate(181deg);
+}
+.container .seventeen{
+    background-color: #cd2e22;
+    transform: rotate(193deg);
+}
+.container .eighteen{
+    background-color: black;
+    transform: rotate(205deg);
+}
+.container .nineteen{
+    background-color: #cd2e22;
+    transform:rotate(217deg);
+}
+.container .twenty{
+    background-color: black;
+    transform: rotate(229deg);
+}
+.container .twentyone{
+    background-color: #cd2e22;
+    transform: rotate(241deg);
+}
+.container .twentytwo{
+    background-color: black;
+    transform: rotate(252deg);
+}
+.container .twentythree{
+    background-color: #cd2e22;;
+    transform: rotate(264deg);
+}
+.container .twentyfour{
+    background-color: black;
+    transform: rotate(276deg);
+}
+.container .twentyfive{
+    background-color: #cd2e22;
+    transform: rotate(288deg);
+}
+.container .twentysix{
+    background-color: black;
+    transform: rotate(300deg);
+}
+.container .twentyseven{
+    background-color: #cd2e22;
+    transform:rotate(312deg);
+}
+.container .twentyeight{
+    background-color: black;
+    transform: rotate(324deg);
+}
+.container .twentynine{
+    background-color: #cd2e22;
+    transform: rotate(336deg);
+}
+.container .thirty{
+    background-color: black;
+    transform: rotate(348deg);
+}
+.container .thirtyone{
+    background-color: #cd2e22;
+    transform: rotate(360deg);
+}
+.arrow{
+    position: relative;
+    width:45px;
+    height:160px;
+    transform: translateX(-50%);
+}
+#spin{
+    position: relative;
+    top:5%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    z-index:20;
+    background-color: #cd2e22;
+    text-transform: uppercase;
+    border:1px solid ;
+    font-weight:bold;
+    font-size:30px;
+    color:white;
+    width: 100px;
+    height:100px;
+    font-family: sans-serif;
+    border-radius:50%;
+    cursor: pointer;
+    outline:none;
+    letter-spacing: 1px;
+}
+
+
