@@ -63,7 +63,7 @@
 					localStorage.setItem("betValue", betNumberCode); //selected number
 					localStorage.setItem("inputBet", bets); //bet
 
-					window.location.href = './roulette.html';
+					location.href = "./roulette.html";
 				}
                 
 				
@@ -144,13 +144,14 @@
             <br />
             <br />
             <br />
+		</form>
 
-            <div class="inps">
-                <input type="number" id="betMoney" />
-                <button value="BET!" onclick="sending()">BET!</button>
-            </div>
+        <div class="inps">
+            <input type="number" id="betMoney" />
+            <button value="BET!" onclick="sending()">BET!</button>
+        </div>
 
-        </form>
+        
 			
 		</div>
 	</body>
