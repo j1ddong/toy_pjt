@@ -1,37 +1,102 @@
 body {
-	width: 100%;
-	padding: 0;
-	margin: 0;
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
 .center {
-	text-align: center;
+  text-align: center;
 }
 .locenter {
-	text-align: center;
-	display: grid;
-	align-items: center;
-	height: 100vh;
-	transform: translate(0, -80px);
+  text-align: center;
+  display: grid;
+  align-items: center;
+  height: 100vh;
+  transform: translate(0, -80px);
 }
 input {
-	border-bottom: 1px solid #eee;
-	padding: 5px 10px;
-	border: 0;
-	box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
-	border-radius: 10px;
-	height: 30px;
+  border-bottom: 1px solid #eee;
+  padding: 5px 10px;
+  border: 0;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+  height: 30px;
 }
 input:focus {
-	outline: none !important;
-	box-shadow: 0 0 10px #719ece;
+  outline: none !important;
+  box-shadow: 0 0 10px #719ece;
 }
 button {
-	appearance: none;
-	-webkit-appearance: none;
-	padding: 10px;
-	border: none;
-	background-color: #252ff5;
-	color: #fff;
-	font-weight: 500;
-	border-radius: 5px;
+  appearance: none;
+  -webkit-appearance: none;
+  padding: 10px;
+  border: none;
+  background-color: #252ff5;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+.intro {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+}
+
+.intro_title {
+  font-size: 60px;
+  line-height: 1.166666666666667;
+  color: #fff;
+  text-align: center;
+}
+
+.intro_title:after {
+  content: "|";
+  display: inline-block;
+  font-size: 70px;
+  animation: moveCursor 600ms infinite;
+}
+
+@keyframes moveCursor {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.intro_button {
+  position: absolute;
+  left: 50%;
+  bottom: 8%;
+  transform: translate(-50%, 8%);
+  width: 37px;
+  height: 37px;
+  background-image: url("./assets/down-arrow.jpeg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  transition: opacity 500ms ease-in;
+  z-index: 100;
+}
+
+.intro_title:hover {
+  cursor: pointer;
+}
+.exactNumberBet {
+  margin-top: 15px ;
+}
+#currency {
+  font-size: 20px;
+}
+.inputContainer {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
 }
