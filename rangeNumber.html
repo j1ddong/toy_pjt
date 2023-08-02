@@ -8,9 +8,10 @@
 
 		<script>
 			function sending() {
+
 				// check: bets <= total money
-				const money = Number(localStorage.getItem('money'));
-				const bets = Number(document.getElementById('betMoney').value);
+				const money = Number(localStorage.getItem("money"));
+				const bets = Number(document.getElementById("betMoney").value);
 
 				if (!bets) {
 					alert('Please enter the bet amount');
@@ -32,20 +33,28 @@
 				}
 
 				let betNumberCode;
-				if (str == '1~10') {
+				if (str == '1~10') 
+                {
 					betNumberCode = 'ten';
-				} else if (str == '11~20') {
+				}
+                else if (str == '11~20') 
+                {
 					betNumberCode = 'twenty';
-				} else if (str == '21~30') {
+				} 
+                else if (str == '21~30') 
+                {
 					betNumberCode = 'thirty';
-				} else if (!str) {
+				}
+                else if (!str) 
+                {
 					alert('please select range');
 				}
 
+                
 				// set to local strage
-				localStorage.setItem('type', 'rangeNum'); //type
-				localStorage.setItem('betValue', betNumberCode); //selected number
-				localStorage.setItem('inputBet', bets); //bet
+				localStorage.setItem("type", "rangeNum"); //type
+				localStorage.setItem("betValue", betNumberCode); //selected number
+				localStorage.setItem("inputBet", bets); //bet
 			}
 		</script>
 
@@ -72,16 +81,25 @@
 				cursor: pointer;
 				border: 2px solid #006dd9;
 				border-radius: 5px;
+                vertical-align: middle;
 			}
 
 			.label:hover {
 				background-color: #e2edf9;
 			}
+
+            form
+            {
+                display: block;
+                text-align: center;
+	            margin: auto;
+            }
+            
 		</style>
 	</head>
 	<body>
 		<div class="locenter">
-			<div class="form1">
+			<form name="form1">
 				<input
 					type="radio"
 					id="tenRange"
@@ -108,17 +126,20 @@
 					value="21~30"
 				/>
 				<label for="thirtyRange" class="label">21~30</label>
+            
 
-				<br />
-				<br />
-				<br />
-				<br />
+            <br />
+            <br />
+            <br />
+            <br />
 
-				<div class="inps">
-					<input type="number" id="betMoney" />
-					<button value="BET!" onclick="sending()">BET!</button>
-				</div>
-			</div>
+            <div class="inps">
+                <input type="number" id="betMoney" />
+                <button value="BET!" onclick="sending()">BET!</button>
+            </div>
+
+        </form>
+			
 		</div>
 	</body>
 </html>
