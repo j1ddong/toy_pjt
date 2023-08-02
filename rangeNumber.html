@@ -100,19 +100,20 @@
 			.label:hover {
 				background-color: #e2edf9;
 			}
+          
 
-            form
-            {
-                display: block;
-                text-align: center;
-	            margin: auto;
-				
-            }
+			.allbody
+			{
+				text-align: center;
+				display: grid;
+				align-items: center;
+				margin-top: 250px;
+			}
             
 		</style>
 	</head>
 	<body>
-		<div class="locenter">
+		<div class="allbody">
 			<form name="form1">
 				<input
 					type="radio"
@@ -142,19 +143,16 @@
 				<label for="thirtyRange" class="label">21~30</label>
             
 
-            <br />
-            <br />
-            <br />
-            <br />
-		</form>
+            	<br />
+            	<br />
+            	<br />
+            	<br />
+			</form>
 
-        <div class="inps">
-            <input type="number" id="betMoney" />
-            <button value="BET!" onclick="sending()">BET!</button>
-        </div>
-
-        
-			
+			<div class="inps">
+				<input type="number" id="betMoney" />
+				<button value="BET!" onclick="sending()">BET!</button>
+			</div>
 		</div>
 	</body>
 </html>
