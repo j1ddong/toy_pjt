@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>rabgeNumber</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../roulette_pjt/style.css" />
+
+    <script>
+      function sending() {
+
+        // selected range
+        let str = '';
+        const range = document.form1.range;
+
+        for (let i = 0; i < range.length; i++) {
+          if (range[i].checked) {
+            str = range[i].value;
+            break;
+          }
+        }
+
+        let betNumberCode;
+        
+
+
+
+        // check: bets <= total money
+        const money = Number(localStorage.getItem("money"));
+        const bets = Number(document.getElementById("betMoney").value);
+
+        if (!bets)
+        {
+          alert('Please enter the bet amount');
+        }
+        else if (bets < 0)
+        {
+          alert('you bet less than 0');
+        }
+        else if (money <= bets)
+        {
+          alert('You bet than you have');
+        }
+        else if(!str)
+        {
+          alert('please select range');
+        }
+        else
+        {
+          if (str == '1~10') 
+                  {
+            betNumberCode = 'ten';
+          }
+                  else if (str == '11~20') 
+                  {
+            betNumberCode = 'twenty';
+          } 
+                  else if (str == '21~30') 
+                  {
+            betNumberCode = 'thirty';
+          }
+
+          // set to local strage
+          localStorage.setItem("type", "rangeNum"); //type
+          localStorage.setItem("betValue", betNumberCode); //selected number
+          localStorage.setItem("inputBet", bets); //bet
+
+          location.href = "./roulette.html";
+        }
+        
+      }
+    </script>
+
+    <style>
+      input[type='radio'] {
+        display: none;
+      }
+
+      input[type='radio']:checked + label {
+        background: #31a9ee;
+        color: #ffffff;
+      }
+
+      .label {
+        font-family: 'REM', sans-serif;
+        font-weight: bold;
+        display: inline-block;
+        margin: 10px;
+        width: 100px;
+        height: 45px;
+        color: #000000;
+        text-align: center;
+        line-height: 45px;
+        cursor: pointer;
+        border: 2px solid #006dd9;
+        border-radius: 5px;
+                vertical-align: middle;
+      }
+
+      .label:hover {
+        background-color: #e2edf9;
+      }
+          
+
+      .allbody
+      {
+        text-align: center;
+        display: grid;
+        align-items: center;
+        margin-top: 250px;
+      }
+            
+    </style>
+  </head>
+  <body>
+    <div class="allbody">
+      <form name="form1">
+        <input
+          type="radio"
+          id="tenRange"
+          name="range"
+          title="Radio1"
+          value="1~10"
+        />
+        <label for="tenRange" class="label">1~10</label>
+
+        <input
+          type="radio"
+          id="twentyRange"
+          name="range"
+          title="Radio2"
+          value="11~20"
+        />
+        <label for="twentyRange" class="label">11~20</label>
+
+        <input
+          type="radio"
+          id="thirtyRange"
+          name="range"
+          title="Radio3"
+          value="21~30"
+        />
+        <label for="thirtyRange" class="label">21~30</label>
+            
+
+              <br />
+              <br />
+    
+t type="number" id="betMoney" />
+        <button value="BET!" onclick="sending()">BET!</button>
+      </div>
+    </div>
+  </body>
+</html>
