@@ -4,69 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Games</title>
-    <style> 
-        #games{
-            max-width: 1536px;
-            max-height: 747px;
-            display: flex;
-            justify-content: center;
-            margin-top: auto;
-            min-height: 50dvh;
-        }
-        .grid-container {
-            display: grid;
-            padding: 10px;
-            margin-bottom: 20px;
-        }
-        .grid-item {
-            padding: 20px;
-        }
-        #games-maindiv{
-            padding-top: 30px; 
-            margin: 10px; 
-            display: flex;
-            justify-content: center;
-        }
-        #games-subdiv{
-            margin-left: 50px;
-            position: relative;
-        }
-        #games-div{
-            position: absolute; 
-            top: -40px; 
-            left: 135px; 
-            float: left; 
-            transform:rotate(-45deg);
-        }
-        #games-divmid{
-            margin-left: 100px; 
-            margin-right: 100px;
-        }
-        #x2{
-            width: 50px;
-            height: 50px;
-        }
-        #x3{
-            width: 50px;
-            height: 50px;
-        }
-        #x5{
-            width: 50px;
-            height: 50px;
-        }
-        #AD{
-            width: 900px;
-            height: 60px;
-        }
-    </style>
+    <link rel="stylesheet" href="./style.css">
 </head>
-<body id="games">
-    <div class="grid-container">
-        <div>
-            <div class="grid-item">
-                <a href="" target="_self"><img id="AD" src="./assets/AD.gif"></img></a>
-            </div>
-        </div>
+<body>
+        <div class="gameCenter">
+            
+            <div class="grid-container">
+                <div>
+                    <div class="grid-item">
+                        <a href="" target="_self"><img id="AD" src="./assets/AD.gif"></img></a>
+                    </div>
+                </div>
         <div class="grid-item" id="games-maindiv">
             <div id="games-subdiv">
                 <a href="./OddEvenNum.html" target="_self"><img id="img" src="./assets/OddEvenNum.png"></img></a>
@@ -93,6 +41,7 @@
             </div>
         </div>
     </div>
+</div>
 </body>
 </html>
 
