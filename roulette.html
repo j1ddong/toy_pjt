@@ -9,17 +9,26 @@
    <link rel="stylesheet" href="roulette.css">
 
 <script>
-
-
+          const spin = () => {
+            document.getElementById('rotate').style.animation = 'rotate 8s' ;
+          }
 </script>
-
+<style>
+       @keyframes rotate {
+                  from {
+                    transform: rotate (-360deg)
+                  }
+                  to {
+                    transform: rotate(360deg)
+                  }
+       }
+</style>
 </head> 
 
 <body>
     <button id="spin" onclick="spin()">Spin</button>
-  
-<div class="container">
     <div class="marker"></div>
+<div id="rotate" class="container">
     <div class="onezero">0</div>
     <div class="two">15</div>
     <div class="three">19</div>
@@ -52,5 +61,6 @@
     <div class="thirty">26</div>
     <div class="thirtyone">30</div>
 </div>
+
 </body>
 </html>

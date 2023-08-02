@@ -37,17 +37,19 @@ body{
     color:#fff;
     left:208.7px;
 }
-.markers{position:absolute;
-    left:50%;
-    top:0;margin-left:-25px;
-    width:0;
-    height:0;
-    border:25px solid black;
-    border-left-color:transparent;
-    border-right-color:transparent;
-    border-bottom-color:transparent;z-index:9999;
-}
-
+.marker {
+    position: absolute;
+    top: 85px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    border-right: 15px solid transparent;
+    border-left: 15px solid transparent;
+    border-top: 45px solid red;
+    border-bottom: 0px solid transparent;
+    z-index: 50;
+  }
 .container .onezero{
     background-color: #cd2e22;
     left: 50%;
@@ -172,12 +174,7 @@ body{
     background-color: #cd2e22;
     transform: rotate(360deg);
 }
-.arrow{
-    position: relative;
-    width:45px;
-    height:160px;
-    transform: translateX(-50%);
-}
+
 #spin{
     position: relative;
     top:5%;
