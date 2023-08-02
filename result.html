@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Result</title>
+    <script>
+      function success() {}
+      const type = localStorage.getItem("type");
+      function getRandom(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+      }
+      const resultValue = getRandom(1, 30);
+      console.log(resultValue);
+
+      const betValue =
+        localStorage.getItem("betValue") === "true" ? true : false;
+
+      let money = Number(localStorage.getItem("money"));
+
+      if (type === "oddEven") {
+        const remainder = resultValue % 2 !== 0; //홀수 true
+        if (remainder === betValue) {
+          location.href = "./success.html";
+          money = betValue * 2 + money;
+          localStorage.clear();
+          localStorage.setItem("money", money);
+        } else {
+          // console.log("슬퍼..");
+          money -= betValue;
+          localStorage.clear();
+          localStorage.setItem("money", money);
+        }
+      } else if (type === "") {
+      } else {
+      }
+    </script>
+  </head>
+  <body>
+    <p id="txt"></p>
+  </body>
+</html>

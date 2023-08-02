@@ -50,8 +50,8 @@
           alert("Please enter more than CAD 0 ");
         } else {
           localStorage.setItem("inputBet", inputBet);
-          //   페이지 이동
-          //   location.href = "./games.html";
+          //   result 페이지 이동
+          location.href = "./result.html";
         }
 
         const money = Number(localStorage.getItem("money")); // parseFloat
@@ -61,6 +61,7 @@
         } else if (money < inputBet && (numTypeO || numTypeE)) {
           alert("Please click ODD or EVEN");
         } else {
+          localStorage.setItem("type", "oddEven");
           // betValue : save even odd value
           if (!numTypeE) {
             // click even (true)
@@ -110,12 +111,17 @@
         font-size: 18px;
         color: gray;
       }
+      #txt {
+        font-family: "REM", sans-serif;
+        font-weight: 600;
+      }
     </style>
   </head>
   <body>
     <div class="locenter">
       <div>
         <div class="squareContainer">
+          <!-- <h1 id="txt">BET!</h1> -->
           <div class="squre">
             <p id="txto">ODD</p>
             <div class="box" id="odd" onclick="clickOdd()"></div>
