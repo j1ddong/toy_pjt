@@ -43,17 +43,37 @@
           numTypeO = true;
         }
       }
-
+      //   function inputBetNum() {
+      //     const inputBet = parseInt(document.getElementById("betm").value);
+      //     if (inputBet <= 0) {
+      //       alert("Please enter more than CAD 0 ");
+      //     } else {
+      //       localStorage.setItem("inputBet", inputBet);
+      //       //   페이지 이동
+      //       //   location.href = "./games.html";
+      //     }
+      //   }
       // sending
       function sending() {
-        let bmoney = Number(document.getElementById("betm").value);
+        const inputBet = parseInt(document.getElementById("betm").value);
+
+        if (inputBet <= 0) {
+          alert("Please enter more than CAD 0 ");
+        } else {
+          localStorage.setItem("inputBet", inputBet);
+          //   페이지 이동
+          //   location.href = "./games.html";
+        }
+
         const money = Number(localStorage.getItem("money")); // parseFloat
 
-        if (money < bmoney) {
-          // 룰렛 페이지로 이동
-          // location.href = '---.html';
-        } else {
+        if (money < inputBet && (!numTypeO || !numTypeE)) {
           alert("You bet than you have");
+        } else if (money < inputBet && (numTypeO || numTypeE)) {
+          alert("Please click ODD or EVEN");
+        } else {
+          // 룰렛 페이지로 이동
+          //   location.href = "./games.html";
         }
       }
     </script>
@@ -111,7 +131,7 @@
 
         <div class="inps">
           <input type="number" id="betm" />
-          <button id="" value="BET!" onclick="sending()">BET!</button>
+          <button value="BET!" onclick="sending()">BET!</button>
         </div>
       </div>
     </div>
