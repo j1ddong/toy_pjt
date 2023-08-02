@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Games</title>
     <link rel="stylesheet" href="./style.css">
+    <script>
+        function zoomIn(event) {
+          event.target.style.transform = "scale(1.2)";
+          event.target.style.zIndex = 1;
+          event.target.style.transition = "all 0.5s";
+        }
+      
+        function zoomOut(event) {
+          event.target.style.transform = "scale(1)";
+          event.target.style.zIndex = 0;
+          event.target.style.transition = "all 0.5s";
+        }
+      </script>
 </head>
 <body>
         <div class="gameCenter">
@@ -17,20 +30,20 @@
                 </div>
         <div class="grid-item" id="games-maindiv">
             <div id="games-subdiv">
-                <a href="./OddEvenNum.html" target="_self"><img id="img" src="./assets/OddEvenNum.png"></img></a>
-                <div id="games-div">
+                <a href="./OddEvenNum.html" target="_self"><img src="./assets/OddEvenNum.png" onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)"></img></a>
+                <div id="games-div1">
                     <img id="x2" src="./assets/x2.png"></img> 
                 </div>
             </div>
             <div id="games-subdiv">
-                <a href="./rangeNumber.html" target="_self"><img id="img" src="./assets/rangeNumber.png" id="games-divmid"></img></a>
-                <div id="games-div">
+                <a href="./rangeNumber.html" target="_self"><img id="games-divmid" src="./assets/rangeNumber.png" onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)"></img></a>
+                <div id="games-div2">
                     <img id="x3" src="./assets/x3.png"></img> 
                 </div>
             </div>
             <div id="games-subdiv">
-                <a href="./exactNumber.html" target="_self"><img id="img" src="./assets/exactNumber.jpg"></img></a>
-                <div id="games-div">
+                <a href="./exactNumber.html" target="_self"><img src="./assets/exactNumber.jpg" onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)"></img></a>
+                <div id="games-div3">
                     <img id="x5" src="./assets/x5.png"></img> 
                 </div>
             </div>

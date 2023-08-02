@@ -118,7 +118,21 @@ button {
 	margin-left: 50px;
 	position: relative;
 }
-#games-div {
+#games-div1 {
+	position: absolute;
+	top: -40px;
+	left: 135px;
+	float: left;
+	transform: rotate(-45deg);
+}
+#games-div2 {
+	position: absolute;
+	top: -40px;
+	left: 235px;
+	float: left;
+	transform: rotate(-45deg);
+}
+#games-div3 {
 	position: absolute;
 	top: -40px;
 	left: 135px;
