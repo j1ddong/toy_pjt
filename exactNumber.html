@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exact Number</title>
+    <link rel="stylesheet" href="./style.css">
+    <script>
+        function clickBet(){
+            const inputBet = Number(document.getElementById('bet').value)
+            const money = Number(localStorage.getItem('money'))
+            const inputNumber = Number(document.getElementById('number').value)
+            if (inputNumber > 30 || inputNumber <= 0) {
+                alert('Please type the number between 1~30') 
+            } else if (!inputNumber) {
+                alert('Please put the number')
+            } else {
+                if(!inputBet) {
+                    alert('Please enter the bet amount')
+                } else if (inputBet > money) {
+                    alert('You bet than you have')
+                } else if (inputBet < 0) {
+                    alert('You bet less than 0')
+                } else {
+                    localStorage.setItem('betValue', inputNumber)
+                    localStorage.setItem('type','exactNumber')
+                    localStorage.setItem('inputBet', inputBet)
+                    // window.location.href = "url"
+                }
+            }
+        }
+     
+       
+
+    </script>
+
+</head>
+<body>
+    <div class="locenter">
+        <div>
+            <div>
+                <p>Guess a Number</p>
+                <input type="text" name="number" id="number">
+            </div>
+            <div class="exactNumberBet inputContainer">
+                <input type="text" name="bet" id="bet">
+                <button onclick="clickBet()">Bet!</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

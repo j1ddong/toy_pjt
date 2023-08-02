@@ -94,3 +94,14 @@ button {
 .intro_title:hover {
   cursor: pointer;
 }
+.exactNumberBet {
+  margin-top: 15px ;
+}
+#currency {
+  font-size: 20px;
+}
+.inputContainer {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+}
