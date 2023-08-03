@@ -72,6 +72,19 @@
           }
         }
       } else {
+        // guess number
+        const betValue = Number(localStorage.getItem("betValue"));
+
+        console.log(betValue, "betValue and ", resultValue, "resultValue");
+        if (betValue === resultValue) {
+          money = inputBet * 5 + money;
+          newLocalStorage(money);
+          location.href = "./success.html";
+        } else {
+          money -= inputBet;
+          newLocalStorage(money);
+          location.href = "./failure.html";
+        }
       }
     </script>
   </head>
