@@ -15,8 +15,10 @@
         localStorage.setItem("money", money);
       }
 
-      const resultValue = getRandom(1, 30);
-      console.log(resultValue);
+      // result value
+      //   const resultValue = getRandom(1, 30);
+      const resultValue = Number(localStorage.getItem("resultValue"));
+
       let money = Number(localStorage.getItem("money"));
       let inputBet = Number(localStorage.getItem("inputBet"));
 
@@ -36,10 +38,8 @@
         }
       } else if (type === "rangeNum") {
         const betValue = localStorage.getItem("betValue");
-        console.log(betValue, "bet");
         if (betValue === "ten") {
-          console.log("10 bet");
-          if (0 <= resultValue <= 10) {
+          if (0 <= resultValue && resultValue <= 10) {
             money = inputBet * 3 + money;
             newLocalStorage(money);
             location.href = "./success.html";
@@ -49,8 +49,7 @@
             location.href = "./failure.html";
           }
         } else if (betValue === "twenty") {
-          console.log("20 bet");
-          if (11 <= resultValue <= 20) {
+          if (11 <= resultValue && resultValue <= 20) {
             money = inputBet * 3 + money;
             newLocalStorage(money);
             location.href = "./success.html";
@@ -60,8 +59,7 @@
             location.href = "./failure.html";
           }
         } else {
-          console.log("30 bet");
-          if (21 <= resultValue <= 30) {
+          if (21 <= resultValue && resultValue <= 30) {
             money = inputBet * 3 + money;
             newLocalStorage(money);
             location.href = "./success.html";
@@ -75,7 +73,6 @@
         // guess number
         const betValue = Number(localStorage.getItem("betValue"));
 
-        console.log(betValue, "betValue and ", resultValue, "resultValue");
         if (betValue === resultValue) {
           money = inputBet * 5 + money;
           newLocalStorage(money);

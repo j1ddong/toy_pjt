@@ -64,16 +64,15 @@
           localStorage.setItem("type", "oddEven");
           // betValue : save even odd value
           if (!numTypeE) {
-            // click even (true)
-            localStorage.setItem("betValue", true);
-          } else if (!numTypeO) {
-            // click odd (false)
+            // click even (false)
             localStorage.setItem("betValue", false);
+          } else if (!numTypeO) {
+            // click odd (true)
+            localStorage.setItem("betValue", true);
           }
           // 룰렛 페이지로 이동
-          //   location.href = "./games.html";
-          //   result 페이지 이동
-          location.href = "./result.html";
+          //   location.href = "./result.html";
+          location.href = "./roulette.html";
         }
       }
     </script>
