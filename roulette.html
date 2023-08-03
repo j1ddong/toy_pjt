@@ -16,12 +16,12 @@
 				let btn = document.getElementById('spin');
 				let number = Math.ceil(Math.random() * 1000);
 				let tempNum = number % 360;
-				console.log(tempNum, typeof tempNum);
 				tempNum = String(31 - Math.round(tempNum / 12));
 				result = document.getElementById(tempNum).innerText;
 				container.style.transform = 'rotate(' + number + 'deg)';
 				number += Math.ceil(Math.random() * 1000);
 				localStorage.setItem('resultValue', result);
+				setTimeout('location.href="./result.html"', 6500)
 			}
 		</script>
 		<style></style>
