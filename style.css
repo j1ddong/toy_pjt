@@ -83,7 +83,6 @@ button {
 	background-position: center center;
 	background-size: contain;
 	transition: opacity 500ms ease-in;
-	z-index: 100;
 }
 
 .intro_title:hover {
