@@ -7,16 +7,12 @@
     <script>
       function success() {}
       const type = localStorage.getItem("type");
-      function getRandom(min, max) {
-        return Math.floor(Math.random() * (max - min + 1) + min);
-      }
 
       function newLocalStorage(money) {
         localStorage.setItem("money", money);
       }
 
       // result value
-      //   const resultValue = getRandom(1, 30);
       const resultValue = Number(localStorage.getItem("resultValue"));
 
       let money = Number(localStorage.getItem("money"));
